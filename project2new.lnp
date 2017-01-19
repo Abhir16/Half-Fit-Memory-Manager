@@ -1,0 +1,5 @@
+--cpu Cortex-M3 "startup_lpc17xx.o" "system_lpc17xx.o" "half_fit.o" "half_fit_test.o" "uart.o" "retarget.o" 
+--library_type=microlib --strict --scatter "project2new.sct" 
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\project2new.map" -o project2new.axf

@@ -1,0 +1,48 @@
+Dependencies for Project 'project2new', Target 'Target 1': (DO NOT MODIFY !)
+F (.\startup_LPC17xx.s)(0x5752FC4C)(--cpu Cortex-M3 -g --apcs=interwork --pd "__MICROLIB SETA 1" -I C:\Software\Keil\ARM\RV31\INC -I C:\Software\Keil\ARM\CMSIS\Include -I C:\Software\Keil\ARM\Inc\NXP\LPC17xx --list "startup_LPC17xx.lst" --xref -o "startup_LPC17xx.o" --depend "startup_LPC17xx.d")
+F (C:\Software\Keil\ARM\Startup\NXP\LPC17xx\system_LPC17xx.c)(0x4F91513C)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I C:\Software\Keil\ARM\RV31\INC -I C:\Software\Keil\ARM\CMSIS\Include -I C:\Software\Keil\ARM\Inc\NXP\LPC17xx -D__RTGT_UART -o "system_lpc17xx.o" --omf_browse "system_lpc17xx.crf" --depend "system_lpc17xx.d")
+I (C:\Software\Keil\ARM\ARMCC\bin\..\include\stdint.h)(0x4EB17B44)
+I (C:\Software\Keil\ARM\Inc\NXP\LPC17xx\LPC17xx.h)(0x4FF5A98C)
+I (C:\Software\Keil\ARM\CMSIS\Include\core_cm3.h)(0x5006D242)
+I (C:\Software\Keil\ARM\CMSIS\Include\core_cmInstr.h)(0x505A054C)
+I (C:\Software\Keil\ARM\CMSIS\Include\core_cmFunc.h)(0x4FDB3D1C)
+I (C:\Software\Keil\ARM\Inc\NXP\LPC17xx\system_LPC17xx.h)(0x4F58EE42)
+F (.\half_fit.c)(0x57540553)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I C:\Software\Keil\ARM\RV31\INC -I C:\Software\Keil\ARM\CMSIS\Include -I C:\Software\Keil\ARM\Inc\NXP\LPC17xx -D__RTGT_UART -o "half_fit.o" --omf_browse "half_fit.crf" --depend "half_fit.d")
+I (half_fit.h)(0x5752FC4C)
+I (C:\Software\Keil\ARM\Inc\NXP\LPC17xx\lpc17xx.h)(0x4FF5A98C)
+I (C:\Software\Keil\ARM\CMSIS\Include\core_cm3.h)(0x5006D242)
+I (C:\Software\Keil\ARM\ARMCC\bin\..\include\stdint.h)(0x4EB17B44)
+I (C:\Software\Keil\ARM\CMSIS\Include\core_cmInstr.h)(0x505A054C)
+I (C:\Software\Keil\ARM\CMSIS\Include\core_cmFunc.h)(0x4FDB3D1C)
+I (C:\Software\Keil\ARM\Inc\NXP\LPC17xx\system_LPC17xx.h)(0x4F58EE42)
+I (C:\Software\Keil\ARM\ARMCC\bin\..\include\stdio.h)(0x4EB17B46)
+I (C:\Software\Keil\ARM\ARMCC\bin\..\include\stdbool.h)(0x4EB17B48)
+I (C:\Software\Keil\ARM\ARMCC\bin\..\include\limits.h)(0x4EB17B3E)
+I (type.h)(0x5752FC4C)
+I (uart.h)(0x5752FC4C)
+F (.\half_fit_test.c)(0x5754055F)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I C:\Software\Keil\ARM\RV31\INC -I C:\Software\Keil\ARM\CMSIS\Include -I C:\Software\Keil\ARM\Inc\NXP\LPC17xx -D__RTGT_UART -o "half_fit_test.o" --omf_browse "half_fit_test.crf" --depend "half_fit_test.d")
+I (half_fit.h)(0x5752FC4C)
+I (C:\Software\Keil\ARM\Inc\NXP\LPC17xx\lpc17xx.h)(0x4FF5A98C)
+I (C:\Software\Keil\ARM\CMSIS\Include\core_cm3.h)(0x5006D242)
+I (C:\Software\Keil\ARM\ARMCC\bin\..\include\stdint.h)(0x4EB17B44)
+I (C:\Software\Keil\ARM\CMSIS\Include\core_cmInstr.h)(0x505A054C)
+I (C:\Software\Keil\ARM\CMSIS\Include\core_cmFunc.h)(0x4FDB3D1C)
+I (C:\Software\Keil\ARM\Inc\NXP\LPC17xx\system_LPC17xx.h)(0x4F58EE42)
+I (C:\Software\Keil\ARM\ARMCC\bin\..\include\stdio.h)(0x4EB17B46)
+I (C:\Software\Keil\ARM\ARMCC\bin\..\include\errno.h)(0x4EB17B44)
+I (C:\Software\Keil\ARM\ARMCC\bin\..\include\stdbool.h)(0x4EB17B48)
+I (C:\Software\Keil\ARM\ARMCC\bin\..\include\stdlib.h)(0x4EB17B44)
+I (uart.h)(0x5752FC4C)
+F (.\uart.c)(0x5753F92C)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I C:\Software\Keil\ARM\RV31\INC -I C:\Software\Keil\ARM\CMSIS\Include -I C:\Software\Keil\ARM\Inc\NXP\LPC17xx -D__RTGT_UART -o "uart.o" --omf_browse "uart.crf" --depend "uart.d")
+I (C:\Software\Keil\ARM\Inc\NXP\LPC17xx\lpc17xx.h)(0x4FF5A98C)
+I (C:\Software\Keil\ARM\CMSIS\Include\core_cm3.h)(0x5006D242)
+I (C:\Software\Keil\ARM\ARMCC\bin\..\include\stdint.h)(0x4EB17B44)
+I (C:\Software\Keil\ARM\CMSIS\Include\core_cmInstr.h)(0x505A054C)
+I (C:\Software\Keil\ARM\CMSIS\Include\core_cmFunc.h)(0x4FDB3D1C)
+I (C:\Software\Keil\ARM\Inc\NXP\LPC17xx\system_LPC17xx.h)(0x4F58EE42)
+I (uart.h)(0x5752FC4C)
+F (.\Retarget.c)(0x5752FC4C)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I C:\Software\Keil\ARM\RV31\INC -I C:\Software\Keil\ARM\CMSIS\Include -I C:\Software\Keil\ARM\Inc\NXP\LPC17xx -D__RTGT_UART -o "retarget.o" --omf_browse "retarget.crf" --depend "retarget.d")
+I (C:\Software\Keil\ARM\ARMCC\bin\..\include\stdio.h)(0x4EB17B46)
+I (C:\Software\Keil\ARM\ARMCC\bin\..\include\rt_misc.h)(0x4EB17B40)
+I (uart.h)(0x5752FC4C)
+I (C:\Software\Keil\ARM\ARMCC\bin\..\include\stdint.h)(0x4EB17B44)
