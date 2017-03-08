@@ -95,12 +95,11 @@ void delete_unalloc_ptrs(block_header* block, int i){
  		bucket[i] = NULL;
  		bucket_flag[i] = 0;
 		}
-		//printf("-----omgosihfdklhfdkljshfdsklj----- when bucket i is %d \n" , i  );
 }
 
 
 
-void update_bucket_ptrs(block_header *new_ptr, block_header *old_ptr , int chunk_size){//COMPLETELY FAILS SINCE UNALLOC SIZE IS CALCULATED WRONG!!!!
+void update_bucket_ptrs(block_header *new_ptr, block_header *old_ptr , int chunk_size){
 	int i;
 	int range = 1;
 	int counter = -2;
@@ -158,7 +157,6 @@ void update_bucket_ptrs(block_header *new_ptr, block_header *old_ptr , int chunk
 		else if (bucket_flag[i] == 0){
 			bucket[i] = new_ptr;
 			bucket_flag[i] = 1;
-			//printf("bucket[i]->size: %d \n", bucket[i]->size);
 			break;
 		}
 	}	
@@ -197,22 +195,18 @@ void create_unalloc_block(block_header *current_ptr, int unalloc_size, int alloc
 		//} else {
 			unalloc_head = (block_header*) ((int)&array | ((int)current_ptr->next << 5));  // null will go to start of array 0000000
 		//}
-		//*((block_header*)(current_ptr->next)) = unalloc_block;
 		unalloc_head->size = unalloc_size + 1;
 		unalloc_head->is_alloc = 0;
 		unalloc_head->prev = (int) current_ptr >> 5;
-		//((block_header*)unalloc_head->prev)->next = (int)unalloc_head>>5;
 		unalloc_head->next = CHUNKPTRS;
 		
 		
 		// extra header
 		extra_header = (unalloc_header*) current_ptr->next + 1;
-		//printf("%d", extra_header);
 		extra_header->prev_unalloc = NULL;
 		extra_header->next_unalloc = NULL;
 		
 		update_bucket_ptrs(unalloc_head, current_ptr, unalloc_size);
-		//print_buckets();
 	}
 }
 
@@ -229,7 +223,7 @@ block_header *create_alloc_block(block_header *current_ptr, int alloc_size){
 		update_bucket_ptrs(current_ptr, NULL, 0);
 		return current_ptr;  
 	}
-	unalloc_size = total_size - alloc_size;//COMPLETELY NOT WORKING
+	unalloc_size = total_size - alloc_size;//cnw
 	current_ptr->size = alloc_size;
 	current_ptr->is_alloc = 1;
 	create_unalloc_block(current_ptr, unalloc_size, alloc_size);
@@ -271,7 +265,7 @@ void coaellece(block_header *left, block_header *right) {
 	//right pointer is the large block of memory to update
 	//left pointer is the block of memory that will merge with right to form big block
 	int i;
-	int temp_left = ((int)(left) >> 5); //temp address of left
+	int temp_left = ((int)(left) >> 5); 
 	int temp_left_prev = ((int)(left->prev) >> 5);
 	
 	block_header *right_bound = (block_header*) ((int)&array | ((int)right->next) << 5);
@@ -316,7 +310,6 @@ void  half_init(void){
 	bucket[10] = (block_header*) STARTMEM; 
 	bucket_flag[10] = 1;
 
-	//print_buckets();
 }
 	
 void *half_alloc(unsigned int size){
@@ -336,9 +329,8 @@ void *half_alloc(unsigned int size){
 	}
 	else{
 		allocated_block = create_alloc_block(bucket[bucket_index], alloc_chunks);
-		//printf("size: %d block allocated \n" , size);
 	}
-	// printf("%d" , allocated_block);
+
 	return allocated_block;
 }
 
@@ -355,8 +347,7 @@ void  half_free(void * address){
 	if(prev_to_htfree == (block_header*)STARTMEM){
 		prev_to_prev = (block_header*) (block_header*) ((int)CHUNKPTRS | ((int)header_to_free->prev));
 	}
-	
-	//printf("the address to free is %d and size is %d  next address is %d \n", address, size_of_addr, next_to_htfree->is_alloc );
+
 	
 	
 	if (size_of_addr == 1023){ //delete the whole block
